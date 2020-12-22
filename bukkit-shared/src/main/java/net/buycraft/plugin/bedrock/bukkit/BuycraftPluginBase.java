@@ -199,7 +199,7 @@ public abstract class BuycraftPluginBase extends JavaPlugin {
         command.getSubcommandMap().put("report", new ReportCommand(this));
         command.getSubcommandMap().put("coupon", new CouponSubcommand(this));
         command.getSubcommandMap().put("sendlink", new SendLinkSubcommand(this));
-        getCommand("buycraft").setExecutor(command);
+        getCommand("bedrockcraft").setExecutor(command);
 
         // Initialize sign layouts.
         try {
