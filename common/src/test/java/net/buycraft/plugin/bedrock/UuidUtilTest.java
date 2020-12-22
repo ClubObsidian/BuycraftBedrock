@@ -7,8 +7,8 @@ import org.junit.Test;
 import java.util.UUID;
 
 public class UuidUtilTest {
-    private static final String MOJANG_UUID = "652a2bc4e8cd405db7b698156ee2dc09";
-    private static final UUID JAVA_UUID = UUID.fromString("652a2bc4-e8cd-405d-b7b6-98156ee2dc09");
+    private static final String MOJANG_UUID = "10000";
+    private static final UUID JAVA_UUID = UUID.fromString("00000000-0000-0000-0000-000000002710");
 
     @Test
     public void testMojangUuidToJavaUuid() throws Exception {
@@ -22,7 +22,7 @@ public class UuidUtilTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testMojangUuidToJavaUuid_InvalidRegex1() throws Exception {
-        UuidUtil.xuidToJavaUuid("42");
+        UuidUtil.xuidToJavaUuid("a");
     }
 
     @Test(expected = IllegalArgumentException.class)

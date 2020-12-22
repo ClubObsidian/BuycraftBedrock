@@ -18,7 +18,7 @@ public final class UuidUtil {
      */
     public static UUID xuidToJavaUuid(String id) {
         Preconditions.checkNotNull(id, "id");
-        Preconditions.checkArgument(id.matches("[0-9]"), "Not a valid xuid.");
+        Preconditions.checkArgument(id.matches("[0-9]+"), "Not a valid xuid.");
         long xuid = Long.parseLong(id);
         return createJavaPlayerId(xuid);
     }
