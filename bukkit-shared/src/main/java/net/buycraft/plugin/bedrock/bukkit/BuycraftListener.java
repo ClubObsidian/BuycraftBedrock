@@ -64,9 +64,14 @@ public class BuycraftListener implements Listener {
         if (plugin.getApiClient() == null) {
             return;
         }
+        Player player = event.getPlayer();
+        FloodgatePlayer floodPlayer = FloodgateAPI.getPlayer(player);
+        if(floodPlayer == null) {
+            return;
+        }
 
         plugin.getServerEventSenderTask().queueEvent(new ServerEvent(
-                event.getPlayer().getUniqueId().toString().replace("-", ""),
+                floodPlayer.getXuid(),
                 event.getPlayer().getName(),
                 event.getPlayer().getAddress().getAddress().getHostAddress(),
                 ServerEvent.LEAVE_EVENT,
