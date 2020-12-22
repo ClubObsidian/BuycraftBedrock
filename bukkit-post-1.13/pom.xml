@@ -10,12 +10,6 @@
 
     <artifactId>buycraftx-bukkit-post-1.13</artifactId>
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

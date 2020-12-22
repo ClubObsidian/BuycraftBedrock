@@ -1,8 +1,0 @@
-name: BuycraftBedrock
-main: net.buycraft.plugin.bedrock.BuycraftPlugin
-version: ${project.version}
-author: Buycraft
-commands:
-  bedrocktebex:
-    aliases: [bedrockcraft]
-    description: Main command for the Tebex plugin.
