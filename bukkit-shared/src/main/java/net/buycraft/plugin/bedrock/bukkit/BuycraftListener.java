@@ -2,12 +2,15 @@ package net.buycraft.plugin.bedrock.bukkit;
 
 import net.buycraft.plugin.bedrock.data.QueuedPlayer;
 import net.buycraft.plugin.bedrock.data.ServerEvent;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.geysermc.floodgate.FloodgateAPI;
+import org.geysermc.floodgate.FloodgatePlayer;
 
 import java.util.Date;
 
@@ -23,9 +26,14 @@ public class BuycraftListener implements Listener {
         if (plugin.getApiClient() == null) {
             return;
         }
+        Player player = event.getPlayer();
+        FloodgatePlayer floodPlayer = FloodgateAPI.getPlayer(player);
+        if(floodPlayer == null) {
+            return;
+        }
 
         plugin.getServerEventSenderTask().queueEvent(new ServerEvent(
-                event.getPlayer().getUniqueId().toString().replace("-", ""),
+                floodPlayer.getXuid(),
                 event.getPlayer().getName(),
                 event.getPlayer().getAddress().getAddress().getHostAddress(),
                 ServerEvent.JOIN_EVENT,

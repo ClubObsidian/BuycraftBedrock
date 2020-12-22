@@ -12,21 +12,21 @@ public class UuidUtilTest {
 
     @Test
     public void testMojangUuidToJavaUuid() throws Exception {
-        Assert.assertEquals(JAVA_UUID, UuidUtil.mojangUuidToJavaUuid(MOJANG_UUID));
+        Assert.assertEquals(JAVA_UUID, UuidUtil.xuidToJavaUuid(MOJANG_UUID));
     }
 
     @Test(expected = NullPointerException.class)
     public void testMojangUuidToJavaUuid_NullId() throws Exception {
-        UuidUtil.mojangUuidToJavaUuid(null);
+        UuidUtil.xuidToJavaUuid(null);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testMojangUuidToJavaUuid_InvalidRegex1() throws Exception {
-        UuidUtil.mojangUuidToJavaUuid("42");
+        UuidUtil.xuidToJavaUuid("42");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testMojangUuidToJavaUuid_InvalidRegex2() throws Exception {
-        UuidUtil.mojangUuidToJavaUuid(Strings.repeat("!", 32));
+        UuidUtil.xuidToJavaUuid(Strings.repeat("!", 32));
     }
 }
