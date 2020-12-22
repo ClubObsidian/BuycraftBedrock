@@ -1,8 +1,8 @@
-name: BuycraftX
-main: net.buycraft.plugin.bukkit.BuycraftPlugin
+name: BuycraftBedrock
+main: net.buycraft.plugin.bedrock.BuycraftPlugin
 version: ${project.version}
 author: Buycraft
 commands:
-  tebex:
-    aliases: [buycraft]
+  bedrocktebex:
+    aliases: [bedrockcraft]
     description: Main command for the Tebex plugin.
