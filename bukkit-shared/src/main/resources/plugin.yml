@@ -1,9 +1,9 @@
 name: BuycraftBedrock
-main: net.buycraft.plugin.bedrock.BuycraftPlugin
+main: net.buycraft.plugin.bedrock.bukkit.BuycraftPlugin
 version: ${project.version}
 author: Buycraft
 api-version: "1.13"
-depend: ["floodgate"]
+depend: ["floodgate-bukkit"]
 commands:
   bedrocktebex:
     aliases: [bedrockcraft]
