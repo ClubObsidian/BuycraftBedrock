@@ -24,27 +24,27 @@
                     <relocations>
                         <relocation>
                             <pattern>com.google.gson</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.gson</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.gson</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>okhttp3</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.okhttp3</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.okhttp3</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>okio</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.okio</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.okio</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>retrofit2</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.retrofit2</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.retrofit2</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>com.fasterxml.jackson</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.jackson</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.jackson</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>org.slf4j</pattern>
-                            <shadedPattern>net.buycraft.plugin.internal.slf4j</shadedPattern>
+                            <shadedPattern>net.buycraft.plugin.bedrock.internal.slf4j</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
