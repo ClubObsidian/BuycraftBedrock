@@ -1,5 +1,6 @@
 package net.buycraft.plugin.bedrock.bukkit;
 
+import net.buycraft.plugin.bedrock.bukkit.util.BedrockUtil;
 import net.buycraft.plugin.bedrock.data.QueuedPlayer;
 import net.buycraft.plugin.bedrock.data.ServerEvent;
 import org.bukkit.entity.Player;
@@ -9,10 +10,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.geysermc.floodgate.FloodgateAPI;
-import org.geysermc.floodgate.FloodgatePlayer;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class BuycraftListener implements Listener {
     private final BuycraftPluginBase plugin;
@@ -27,13 +27,15 @@ public class BuycraftListener implements Listener {
             return;
         }
         Player player = event.getPlayer();
-        FloodgatePlayer floodPlayer = FloodgateAPI.getPlayer(player);
-        if(floodPlayer == null) {
+        UUID uuid = player.getUniqueId();
+        if(!BedrockUtil.isBedrockUUID(uuid)) {
             return;
         }
 
+        String xuid = BedrockUtil.getXUIDStr(uuid);
+
         plugin.getServerEventSenderTask().queueEvent(new ServerEvent(
-                floodPlayer.getXuid(),
+                xuid,
                 event.getPlayer().getName(),
                 event.getPlayer().getAddress().getAddress().getHostAddress(),
                 ServerEvent.JOIN_EVENT,
@@ -65,13 +67,14 @@ public class BuycraftListener implements Listener {
             return;
         }
         Player player = event.getPlayer();
-        FloodgatePlayer floodPlayer = FloodgateAPI.getPlayer(player);
-        if(floodPlayer == null) {
+        UUID uuid = player.getUniqueId();
+        if(!BedrockUtil.isBedrockUUID(uuid)) {
             return;
         }
+        String xuid = BedrockUtil.getXUIDStr(uuid);
 
         plugin.getServerEventSenderTask().queueEvent(new ServerEvent(
-                floodPlayer.getXuid(),
+                xuid,
                 event.getPlayer().getName(),
                 event.getPlayer().getAddress().getAddress().getHostAddress(),
                 ServerEvent.LEAVE_EVENT,

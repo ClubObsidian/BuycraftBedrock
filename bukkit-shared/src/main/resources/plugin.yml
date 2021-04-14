@@ -3,7 +3,6 @@ main: net.buycraft.plugin.bedrock.bukkit.BuycraftPlugin
 version: ${project.version}
 author: Buycraft
 api-version: "1.13"
-depend: ["floodgate-bukkit"]
 commands:
   bedrocktebex:
     aliases: [bedrockcraft]
