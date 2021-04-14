@@ -10,6 +10,6 @@ public class NamePlaceholder implements Placeholder {
 
     @Override
     public String replace(String command, QueuedPlayer player, QueuedCommand queuedCommand) {
-        return REPLACE_NAME.matcher(command).replaceAll(player.getName());
+        return REPLACE_NAME.matcher(command).replaceAll(player.getName().replace(" ", "_"));
     }
 }
