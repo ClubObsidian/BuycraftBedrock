@@ -1,6 +1,11 @@
-# BuycraftBedrock
+<div align="center">
+<h1>BuycraftBedrock</h1>
 
-BuycraftBedrock is a fork of the [BuycraftX](https://github.com/tebexio/BuycraftX) plugin that supports bedrock.
+[![build](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/maven.yml/badge.svg)](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/maven.yml)
+
+BuycraftBedrock is a fork of the [BuycraftX](https://github.com/tebexio/BuycraftX) plugin that supports bedrock players for Java servers.
+
+</div>
 
 ## Fork Details
 
