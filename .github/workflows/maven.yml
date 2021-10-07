@@ -24,5 +24,5 @@ jobs:
       with:
         name: BuycraftBedrock
         path: |
-          bukkit-post-1.13/target/*.jar
-          bukkit-pre-1.13/target/*.jar
+          bukkit-post-1.13/target/buycraftx-bukkit-post*.jar
+          bukkit-pre-1.13/target/buycraftx-bukkit-pre*.jar
