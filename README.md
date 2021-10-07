@@ -1,7 +1,7 @@
 <div align="center">
 <h1>BuycraftBedrock</h1>
 
-[![build](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/maven.yml/badge.svg)](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/maven.yml)
+[![build](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/build.yml/badge.svg)](https://github.com/ClubObsidian/BuycraftBedrock/actions/workflows/build.yml)
 
 BuycraftBedrock is a fork of the [BuycraftX](https://github.com/tebexio/BuycraftX) plugin that supports bedrock players for Java servers.
 
